@@ -1,0 +1,47 @@
+header {
+  display: block;
+}
+
+#header {
+  padding: 1em 0 0.1em 0;
+  /* background-color: aqua; */
+  box-shadow: inset 0px -3px 1px #ccc;
+}
+
+#header .title {
+  color: #585858;
+}
+
+#header .logo {
+  display: block;
+  border-bottom: 0;
+  color: inherit;
+  font-weight: 900;
+  letter-spacing: 0.35em;
+  margin: 0 0 1em 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+#header .logo > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#header .logo .symbol {
+  margin-right: 0.65em;
+  margin-left: 0.65em;
+}
+
+#header .logo .symbol img {
+  display: block;
+  width: 2em;
+  height: 2em;
+}
+
+@media screen and (min-width: 736px) {
+  #header {
+    padding: 1.5em 0 0.1em 0;
+  }
+}
