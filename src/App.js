@@ -1,13 +1,16 @@
 import React from 'react';
-import Header from "./components/Header";
+import { Route } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
+import Header from './components/Header';
+import ShipmentDetails from './components/ShipmentDetails';
 
 
-function App() {
+const App = () => {
   return (
-    <div>
+    <div className="App">
       <Header />
-      <Dashboard/>
+      <Route path="/" exact component={Dashboard} />
+      <Route path="/:id" component={ShipmentDetails} />
     </div>
   );
 }

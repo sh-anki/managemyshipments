@@ -20,6 +20,10 @@ class Dashboard extends Component {
       });
   }
 
+  shipmentClickHandler = (item) => {
+    this.props.history.push("/" + item.id);
+}
+
   render() {
     return (
       <div id="dashboard">
@@ -27,7 +31,7 @@ class Dashboard extends Component {
           {" "}
           {this.state.data.map((item, index) => {
              return (
-                <ShipmentCard shipment={item} key={index} />
+                <ShipmentCard shipment={item} key={index} clickHandler={() => this.shipmentClickHandler(item)} />
             )
           })}
         </section>
