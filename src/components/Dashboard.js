@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import _axios from "../services/api";
+import ShipmentCard from "./ShipmentCard";
+import "../assets/styles/shipments.css";
 
 class Dashboard extends Component {
   constructor() {
@@ -24,7 +26,9 @@ class Dashboard extends Component {
         <section className="shipments">
           {" "}
           {this.state.data.map((item, index) => {
-            return <div key={index}>{item.id}</div>;
+             return (
+                <ShipmentCard shipment={item} key={index} />
+            )
           })}
         </section>
       </div>
