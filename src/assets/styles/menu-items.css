@@ -1,0 +1,29 @@
+.option-fields {
+  display: inline-block;
+  margin-top: 1%;
+  margin-left: 40%;
+}
+
+.option-fields label {
+  font-size: small;
+  margin-left: 5px;
+}
+
+.option-fields select.input {
+  height: 2.1em;
+}
+
+.search-field {
+  display: inline-block;
+  height: 3em;
+  align-items: center;
+  margin-left: 5px;
+}
+.search-field .input {
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+  line-height: 2em;
+  border-radius: 5px;
+  flex: 1;
+  width: 100%;
+  border: 0;
+}

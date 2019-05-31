@@ -29,3 +29,30 @@ table {
     text-transform: uppercase;
     text-align: justify;
   }
+
+  table .edit-button {
+    margin-left: 1%;
+    margin: 5px;
+    padding: 4px 12px;  
+    font-size: 12px;
+    text-decoration: none;
+    background-color: #585858;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .button-wrapper {
+    margin: 2%;
+  }
+  
+  .back-button, .pop-action button {
+    margin: 9px;
+    padding: 8px 18px;  
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #585858;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }

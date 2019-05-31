@@ -4,7 +4,8 @@ import "../assets/styles/shipments.css";
 const ShipmentCard = (props) => {
     const { name, id, origin, destination, mode } = props.shipment;
     return (
-        <div className="shipment-card"  onClick={() => props.clickHandler(props.shipment)} >
+        <div className="shipment-card"
+            onClick={() => props.clickHandler(props.shipment)} >
             <div className="shipment-info">
                 <h4 className="shipment-name">{name ? name : "Not Available"}</h4>
                 <h5><strong>Shipment ID: </strong>{id ? id : "Not Available"}</h5>
