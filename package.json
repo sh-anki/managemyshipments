@@ -17,15 +17,18 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.1",
-    "react-test-renderer": "^16.8.6"
+    "react-test-renderer": "^16.8.6",
+    "serve": "^11.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
+    "fakeJson": "json-server db.json --port 3001",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:development": "env-cmd .env.development npm run build",
-    "build:production": "env-cmd .env.production npm run build"
+    "dev": "npm run start | npm run fakeJson",
+    "build:development": "env-cmd -f .env.development npm run build",
+    "build:production": "env-cmd -f .env.production npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"

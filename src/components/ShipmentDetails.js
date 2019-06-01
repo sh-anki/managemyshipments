@@ -20,7 +20,8 @@ class ShipmentDetails extends Component {
       .then(response => response.data)
       .then(data => {
         this.setState({ shipmentDetails: data });
-      });
+      })
+      .catch(error => console.error(error.message));
   }
 
   togglePopup = () => {
@@ -36,13 +37,14 @@ class ShipmentDetails extends Component {
     });
     await _axios
       .patch("/shipments/" + this.state.shipmentDetails.id, {
-        headers: { "Content-Type": "application/json; charset=utf-8" },
+        method: "PATCH",
         name: this.textInput.value
       })
       .then(response => response.data)
       .then(data => {
         this.setState({ shipmentDetails: data });
-      });
+      })
+      .catch(error => console.error(error.message));
   }
 
   render() {
@@ -53,8 +55,32 @@ class ShipmentDetails extends Component {
       status,
       type,
       origin,
-      destination
+      destination,
+      cargo
     } = this.state.shipmentDetails;
+    const _cargo =
+      cargo &&
+      cargo.map((items, index) => {
+        return (
+          <React.Fragment>
+            <tr>
+              <td rowSpan="4">Cargo {index + 1} Details</td>
+            </tr>
+            <tr className="cargo-item">
+              <td>Type</td>
+              <td>{items.type}</td>
+            </tr>
+            <tr className="cargo-item">
+              <td>Details</td>
+              <td>{items.description}</td>
+            </tr>
+            <tr className="cargo-item">
+              <td>Volume</td>
+              <td>{items.volume}</td>
+            </tr>
+          </React.Fragment>
+        );
+      });
     return (
       <React.Fragment>
         <div id="main">
@@ -105,6 +131,7 @@ class ShipmentDetails extends Component {
                   <td>Current Status</td>
                   <td>{status}</td>
                 </tr>
+                {_cargo}
               </tbody>
             </table>
           </div>

@@ -41,6 +41,10 @@ table .edit-button {
   cursor: pointer;
 }
 
+.cargo-item {
+  font-size: 75% !important;
+}
+
 .button-wrapper {
   margin: 2%;
 }

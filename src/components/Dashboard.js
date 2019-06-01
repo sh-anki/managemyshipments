@@ -28,7 +28,7 @@ class Dashboard extends Component {
           this.state.data.length
             ? this.setState({ hasResults: true })
             : this.setState({ hasResults: false });
-        });
+        }).catch(error => console.error(error.message));
       });
   }
 
@@ -36,7 +36,6 @@ class Dashboard extends Component {
     this.setState({
       currentPage: Number(event.target.id)
     });
-    //event.target.className = "selected";
   };
 
   shipmentClickHandler = item => {

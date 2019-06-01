@@ -38,6 +38,10 @@
   color: #403f3f;
 }
 
+.shipment-nt {
+  color: #ff0000;
+}
+
 .click-layer {
   position: absolute;
   top: 0;

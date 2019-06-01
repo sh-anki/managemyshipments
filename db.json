@@ -2,7 +2,7 @@
   "shipments": [
     {
       "id": "S1000",
-      "name": "New Spring Collections",
+      "name": "New Spring Collection",
       "cargo": [
         {
           "type": "Fabric",
@@ -29,7 +29,9 @@
       "userId": "U1000",
       "headers": {
         "Content-Type": "application/json; charset=utf-8"
-      }
+      },
+      "method": "PATCH",
+      "body": "{\"name\":\"NSC\"}"
     },
     {
       "id": "S1001",
@@ -64,7 +66,8 @@
       "userId": "U1002",
       "headers": {
         "Content-Type": "application/json; charset=utf-8"
-      }
+      },
+      "method": "PATCH"
     },
     {
       "id": "S1002",
@@ -131,36 +134,9 @@
       "userId": "U1002"
     },
     {
+      "name": "Discount Coupons",
       "id": "S1004",
-      "name": "Shoe collection",
-      "cargo": [
-        {
-          "type": "Shoes",
-          "description": "300",
-          "volume": "20"
-        },
-        {
-          "type": "Sandals",
-          "description": "1500",
-          "volume": "15"
-        }
-      ],
-      "mode": "air",
-      "type": "FCL",
-      "destination": "Copenhagen",
-      "origin": "Bangladesh",
-      "services": [
-        {
-          "type": "customs"
-        },
-        {
-          "type": "insurance",
-          "value": "100"
-        }
-      ],
-      "total": "3000",
-      "status": "ACTIVE",
-      "userId": "U1002"
+      "method": "PATCH"
     },
     {
       "id": "S1005",
