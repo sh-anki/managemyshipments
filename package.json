@@ -27,7 +27,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "npm run start | npm run fakeJson",
-    "build:development": "env-cmd -f .env.development npm run build",
     "build:production": "env-cmd -f .env.production npm run build"
   },
   "eslintConfig": {

@@ -36,8 +36,7 @@ class ShipmentDetails extends Component {
       showPopup: !this.state.showPopup
     });
     await _axios
-      .patch("/shipments/" + this.state.shipmentDetails.id, {
-        method: "PATCH",
+      .patch("/shipments/" + this.state.shipmentDetails.id,  {        
         name: this.textInput.value
       })
       .then(response => response.data)
@@ -62,7 +61,7 @@ class ShipmentDetails extends Component {
       cargo &&
       cargo.map((items, index) => {
         return (
-          <React.Fragment>
+          <React.Fragment key={index}>
             <tr>
               <td rowSpan="4">Cargo {index + 1} Details</td>
             </tr>
@@ -95,7 +94,7 @@ class ShipmentDetails extends Component {
               <tbody>
                 <tr>
                   <td>Shipment Name</td>
-                  <td>
+                  <td colSpan={2}>
                     {name}
                     <input
                       type="button"
@@ -108,28 +107,28 @@ class ShipmentDetails extends Component {
                 </tr>
                 <tr>
                   <td>Shipment ID</td>
-                  <td>{id}</td>
+                  <td colSpan={2}>{id}</td>
                 </tr>
                 <tr>
                   <td>Shipment Mode</td>
-                  <td>{mode}</td>
+                  <td colSpan={2}>{mode}</td>
                 </tr>
                 <tr>
                   <td>Port Of Origin</td>
-                  <td>{origin}</td>
+                  <td colSpan={2}>{origin}</td>
                 </tr>
                 <tr>
                   <td>Shipment Destination</td>
-                  <td>{destination}</td>
+                  <td colSpan={2}>{destination}</td>
                 </tr>
 
                 <tr>
                   <td>Shipment Type</td>
-                  <td>{type}</td>
+                  <td colSpan={2}>{type}</td>
                 </tr>
                 <tr>
                   <td>Current Status</td>
-                  <td>{status}</td>
+                  <td colSpan={2}>{status}</td>
                 </tr>
                 {_cargo}
               </tbody>

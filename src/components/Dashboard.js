@@ -27,9 +27,9 @@ class Dashboard extends Component {
         this.setState({ data: data }, () => {
           this.state.data.length
             ? this.setState({ hasResults: true })
-            : this.setState({ hasResults: false });
-        }).catch(error => console.error(error.message));
-      });
+            : this.setState({ hasResults: false })
+        });
+      }).catch(error => console.error(error.message));
   }
 
   handlePageturn = event => {
